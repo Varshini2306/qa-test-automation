@@ -24,7 +24,7 @@ public class AppTest
 	options.addArguments("--headless=new");
 	WebDriver driver = new ChromeDriver(options);
 	driver.get("https://login.salesforce.com");
-	driver.findElement(By.id("username")).sendKeys("varshini.jangam@salesforce.cm");
+	driver.findElement(By.id("username")).sendKeys("varshini.jangam@salesforce.com");
 	driver.findElement(By.id("password")).sendKeys("test1234");
 	driver.findElement(By.id("Login")).click();	
 	String ActualTitle = driver.getTitle();
