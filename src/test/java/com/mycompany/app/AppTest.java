@@ -28,7 +28,7 @@ public class AppTest
 	driver.findElement(By.id("password")).sendKeys("test1234");
 	driver.findElement(By.id("Login")).click();	
 	String ActualTitle = driver.getTitle();
-	String ExpectedTitle = "Verify Your Identit | Salesforce";
+	String ExpectedTitle = "Verify Your Identity | Salesforce";
 	System.out.println(ActualTitle);
 	System.out.println(ExpectedTitle);
 	Assert.assertEquals(ExpectedTitle, ActualTitle);
