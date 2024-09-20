@@ -33,26 +33,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with: 
         name: assets-for-download
-        path: ./target/surefire-reports    
-    - name: Send mail
-      if: always() && true
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        # user credentials
-        username: ${{ secrets.EMAIL_USERNAME }}
-        password: ${{ secrets.EMAIL_PASSWORD }}
-        # email subject
-        subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
-        # email body as text
-        body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
-        # comma-separated string, send email to
-        to: varshini.jangam@outlook.com
-        # from email name
-        from: John Doe
-        attachments: ./target/surefire-reports/emailable-report.html
-        html_body: ./target/surefire-reports/emailable-report.html
+        path: ./target/surefire-reports
 
      
       
